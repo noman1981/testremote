@@ -1,0 +1,15 @@
+
+#Dependencies:
+
+1- pytest 7.1.2       # pip install pytest
+
+#Explanation:
+
+In this task first we define a abstract class by inheriting it from ABC module and define all the abstract methods
+that we want users to implement when implementing concrete class. Then we implement concrete class and implement all
+the methods. Then in the next part we write test for concrete class using pytest module which is python unit test
+module and run pytest to check if test fails or passes using command:
+
+    python -m pytest
+
+

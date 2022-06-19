@@ -1,0 +1,19 @@
+#Dependencies:
+
+1- pytest 7.1.2       # pip install pytest
+2- dicttoxml 1.7.4      # pip install dicttoxml
+
+#Explanation:
+
+For this task first we define a class and all the methods/operations that we want from the module. for example in
+insert function we enable both bulk and single insertion. Most important is save method which saves the data to
+a location or server. We define variable at class level for final file format so that user can easily configure which
+format he wants the result to be in. Sample Implementation of the module is as follow.
+
+    ds = DataStore(out_format='xml')  # configuring output format to xml, default is json
+    ds.insert([('name1', 'Haibat'), ('name2', 'Haider'), ('name3', 'Hussain'), ('name4', 'Ammar'),
+               ('name5', 'Abdullah'), ('age1', 24), ('age2', 24)])
+    print(ds.pull('name1'))     # return value against provided key
+    print(ds.get_values())      # return all value in storage
+    dic = ds.filter('nam', offset=2, limit=3)   # filter for key containing "nam" with offset 2 and limit 3
+    ds.save()   # saving storage file to default location
